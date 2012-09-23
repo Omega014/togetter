@@ -12,7 +12,6 @@ my $url = shift or die;
 #Webデータ取得のためのおまじない 
 my $ua = new LWP::UserAgent;
 
-#デコードしてcontentに代入
 $ua->env_proxy;
 my $res = $ua->get($url) or die;
 my $content = $res->decoded_content or die;
